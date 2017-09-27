@@ -11,7 +11,7 @@
         <h1>@ViewData["Title"]</h1>
     </div>
 
-    <form asp-controller="Account" asp-action="Register" method="post">
+    <form asp-controller="Account" asp-action="Register" action="/Account/Register" method="post">
         @if( !ViewContext.ViewData.ModelState.IsValid )
         {
             <div asp-validation-summary="All" class="alert alert-danger"></div>
@@ -19,7 +19,14 @@
 
         <div class="form-group">
             <label asp-for="Email">E-mail : </label>
+
+            <!-- Input auto-généré par ASP.NET -->
             <input asp-for="Email" class="form-control" />
+
+            <!-- Equivalent à la main -->
+            <input type="email" name="Email" value="@Model.Email" />
+
+
             <span asp-validation-for="Email"></span>
         </div>
 

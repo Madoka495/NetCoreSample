@@ -1,0 +1,38 @@
+﻿@using ITI.PrimarySchool.WebApp.Models.TestViewModels
+
+@model BasicTestViewModel
+
+<form method="post" action="/Test/Index">
+    @if( !ViewContext.ViewData.ModelState.IsValid )
+    {
+        <div asp-validation-summary="All" class="alert alert-danger"></div>
+    }
+
+    <div>
+        <label asp-for="Color"></label>
+
+        <select asp-for="Color">
+            <option value="R">Rouge</option>
+            <option value="V">Vert</option>
+            <option value="B">Bleu</option>
+        </select>
+
+        <span asp-validation-for="Color"></span>
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+
+        <span asp-validation-for="Age"></span>
+    </div>
+
+    <div>
+        <label asp-for="PostalCode"></label>
+        <input asp-for="PostalCode" />
+
+        <span asp-validation-for="PostalCode"></span>
+    </div>
+
+    <button type="submit">Envoyer</button>
+</form>
