@@ -4,7 +4,6 @@ const endpoint = "/api/teacher";
 
 class TeacherApiService {
     constructor() {
-
     }
 
     async getTeacherListAsync() {

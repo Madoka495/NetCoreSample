@@ -10,6 +10,10 @@ const mutations = {
         state.isLoading = isLoading
     },
 
+    // 'SET_IS_LOADING': function(state, isLoading) {
+    //     state.isLoading = isLoading
+    // },
+
     [types.ERROR_HAPPENED](state, error) {
         state.errors.push(error || "")
     }

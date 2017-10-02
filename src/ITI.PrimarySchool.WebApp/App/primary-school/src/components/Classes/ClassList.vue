@@ -59,6 +59,7 @@
 
             async refreshList() {
                 try {
+                    //this.store.dispatch('notifyLoading', true);
                     this.notifyLoading(true);
                     this.classList = await ClassApiService.getClassListAsync();
                 }
